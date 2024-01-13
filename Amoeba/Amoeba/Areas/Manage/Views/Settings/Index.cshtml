@@ -1,0 +1,55 @@
+﻿@model ICollection<Settings>
+@{
+    int count = 0;
+}
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Settings</h4>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                #
+                            </th>
+                           
+                            <th>
+                                Key
+                            </th>
+                            <th>
+                                Value
+                            </th>
+                            <th>
+                                Settings
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            count++;
+                            <tr>
+                                <td>
+                                    @count
+                                </td>
+                              
+                                <td>
+                                    @item.Key
+                                </td>
+                                <td>
+                                    @item.Value
+                                </td>
+                                <td>
+                                    <a asp-controller="settings" asp-action="update" asp-route-id="@item.Id"><i class="mdi mdi-lead-pencil"></i></a>
+                                </td>
+
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
