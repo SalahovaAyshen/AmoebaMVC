@@ -96,12 +96,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\hero-background.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\portfolio\a601ce67-6f02-451d-9dd4-d88b5e4b0074WhatsApp Image 2022-09-04 at 00.27.16.jpeg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\portfolio\24e2fa66-289a-4cf4-b50f-894daeabef29WhatsApp Image 2022-09-04 at 00.27.23.jpeg))">
       <SourceType>Package</SourceType>
       <SourceId>Amoeba</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Amoeba</BasePath>
-      <RelativePath>assets/img/portfolio/a601ce67-6f02-451d-9dd4-d88b5e4b0074WhatsApp Image 2022-09-04 at 00.27.16.jpeg</RelativePath>
+      <RelativePath>assets/img/portfolio/24e2fa66-289a-4cf4-b50f-894daeabef29WhatsApp Image 2022-09-04 at 00.27.23.jpeg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -110,23 +110,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\portfolio\a601ce67-6f02-451d-9dd4-d88b5e4b0074WhatsApp Image 2022-09-04 at 00.27.16.jpeg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\portfolio\a87fb253-677d-4cf3-a96a-96c08f49e21dWhatsApp Image 2022-09-04 at 00.29.26 (1).jpeg))">
-      <SourceType>Package</SourceType>
-      <SourceId>Amoeba</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Amoeba</BasePath>
-      <RelativePath>assets/img/portfolio/a87fb253-677d-4cf3-a96a-96c08f49e21dWhatsApp Image 2022-09-04 at 00.29.26 (1).jpeg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\portfolio\a87fb253-677d-4cf3-a96a-96c08f49e21dWhatsApp Image 2022-09-04 at 00.29.26 (1).jpeg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\portfolio\24e2fa66-289a-4cf4-b50f-894daeabef29WhatsApp Image 2022-09-04 at 00.27.23.jpeg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\portfolio\portfolio-1.jpg))">
       <SourceType>Package</SourceType>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qGRLQTgLNycW+GO6RoVqzToQDB9GrIi7EUg05qccgfk=",
+  "Hash": "A6I076w2EPrwciJFk/X0fCDcjzHirC9F0jUOW9o6cDM=",
   "Source": "Amoeba",
   "BasePath": "_content/Amoeba",
   "Mode": "Default",
@@ -131,12 +131,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\hero-background.jpg"
     },
     {
-      "Identity": "C:\\Users\\hp\\Desktop\\AmoebaMVC\\Amoeba\\Amoeba\\wwwroot\\assets\\img\\portfolio\\a601ce67-6f02-451d-9dd4-d88b5e4b0074WhatsApp Image 2022-09-04 at 00.27.16.jpeg",
+      "Identity": "C:\\Users\\hp\\Desktop\\AmoebaMVC\\Amoeba\\Amoeba\\wwwroot\\assets\\img\\portfolio\\24e2fa66-289a-4cf4-b50f-894daeabef29WhatsApp Image 2022-09-04 at 00.27.23.jpeg",
       "SourceId": "Amoeba",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\hp\\Desktop\\AmoebaMVC\\Amoeba\\Amoeba\\wwwroot\\",
       "BasePath": "_content/Amoeba",
-      "RelativePath": "assets/img/portfolio/a601ce67-6f02-451d-9dd4-d88b5e4b0074WhatsApp Image 2022-09-04 at 00.27.16.jpeg",
+      "RelativePath": "assets/img/portfolio/24e2fa66-289a-4cf4-b50f-894daeabef29WhatsApp Image 2022-09-04 at 00.27.23.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -147,26 +147,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\portfolio\\a601ce67-6f02-451d-9dd4-d88b5e4b0074WhatsApp Image 2022-09-04 at 00.27.16.jpeg"
-    },
-    {
-      "Identity": "C:\\Users\\hp\\Desktop\\AmoebaMVC\\Amoeba\\Amoeba\\wwwroot\\assets\\img\\portfolio\\a87fb253-677d-4cf3-a96a-96c08f49e21dWhatsApp Image 2022-09-04 at 00.29.26 (1).jpeg",
-      "SourceId": "Amoeba",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\hp\\Desktop\\AmoebaMVC\\Amoeba\\Amoeba\\wwwroot\\",
-      "BasePath": "_content/Amoeba",
-      "RelativePath": "assets/img/portfolio/a87fb253-677d-4cf3-a96a-96c08f49e21dWhatsApp Image 2022-09-04 at 00.29.26 (1).jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\portfolio\\a87fb253-677d-4cf3-a96a-96c08f49e21dWhatsApp Image 2022-09-04 at 00.29.26 (1).jpeg"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\portfolio\\24e2fa66-289a-4cf4-b50f-894daeabef29WhatsApp Image 2022-09-04 at 00.27.23.jpeg"
     },
     {
       "Identity": "C:\\Users\\hp\\Desktop\\AmoebaMVC\\Amoeba\\Amoeba\\wwwroot\\assets\\img\\portfolio\\portfolio-1.jpg",
