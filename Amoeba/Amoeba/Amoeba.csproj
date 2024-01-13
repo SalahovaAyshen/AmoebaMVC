@@ -7,11 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Manage\ViewModels\" />
-    <Folder Include="Utilities\Extensions\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\manage\fonts\.DS_Store" />
     <None Include="wwwroot\manage\fonts\Roboto\.DS_Store" />
     <None Include="wwwroot\manage\images\.DS_Store" />
