@@ -1,0 +1,96 @@
+﻿<style>
+    * {
+        box-sizing: border-box
+    }
+
+    /* Add padding to containers */
+    .container {
+        padding: 16px;
+    }
+
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+        input[type=text]:focus, input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+    /* Overwrite default styles of hr */
+    hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+    }
+
+    /* Set a style for the submit/register button */
+    .registerbtn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+        .registerbtn:hover {
+            opacity: 1;
+        }
+
+    /* Add a blue text color to links */
+    a {
+        color: dodgerblue;
+    }
+
+    /* Set a grey background color and center the text of the "sign in" section */
+    .signin {
+        background-color: #f1f1f1;
+        text-align: center;
+    }
+</style>
+@model RegisterVM
+<form method="post">
+    <div class="container">
+        <h1>Register</h1>
+        <hr>
+
+        <label asp-for="Name"><b>Name</b></label>
+        <input placeholder="Enter Name" asp-for="Name">
+        <span asp-validation-for="Name" class="text-danger"></span>
+
+       <label asp-for="Surname"><b>Surname</b></label>
+        <input placeholder="Enter Surname" asp-for="Surname">
+        <span asp-validation-for="Surname" class="text-danger"></span>
+
+        <label asp-for="Username"><b>Username</b></label>
+        <input placeholder="Enter Username" asp-for="Username">
+        <span asp-validation-for="Username" class="text-danger"></span>
+
+        <label asp-for="Email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email" asp-for="Email">
+        <span asp-validation-for="Email" class="text-danger"></span>
+
+        <label asp-for="Password"><b>Password</b></label>
+        <input placeholder="Enter password"  asp-for="Password">
+        <span asp-validation-for="Password" class="text-danger"></span>
+
+        <label asp-for="ConfirmPassword"><b>Repeat password</b></label>
+        <input placeholder="Enter Password" asp-for="ConfirmPassword">
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+
+        <button type="submit">Register</button>
+    </div>
+
+    <div class="container signin">
+        <p>Already have an account? <a asp-controller="account" asp-action="login">Sign in</a>.</p>
+    </div>
+</form>
+
