@@ -72,5 +72,67 @@ namespace Amoeba.Areas.Manage.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        public async Task<IActionResult> Update(int id)
+        {
+            if (id <= 0) return BadRequest();
+            Portfolio portfolio = await _context.Portfolios.FirstOrDefaultAsync(p=>p.Id==id);
+            if(portfolio is null) return NotFound();
+            UpdatePortfolioVM portfolioVM  = new UpdatePortfolioVM 
+            {
+                Name = portfolio.Name,
+                Client = portfolio.Client,
+                ProjectDate = portfolio.ProjectDate,
+                ProjectUrl = portfolio.ProjectUrl,
+                CategoryId = (int) portfolio.CategoryId,
+                Detail= portfolio.Detail,
+                Categories = await _context.Categories.ToListAsync()
+            };
+            return View(portfolioVM);   
+        }
+        [HttpPost]
+        public async Task<IActionResult> Update(int id, UpdatePortfolioVM portfolioVM)
+        {
+            portfolioVM.Categories = await _context.Categories.ToListAsync();
+            if (id <= 0) return BadRequest();
+            Portfolio portfolio = await _context.Portfolios.FirstOrDefaultAsync(p => p.Id == id);
+            if (portfolio is null) return NotFound();
+            if (!ModelState.IsValid) return View();
+            if(portfolioVM.Photo is not null)
+            {
+                if (!portfolioVM.Photo.ValidateType("image/"))
+                {
+                    ModelState.AddModelError("Photo", "Wrong type");
+                    return View(portfolioVM);
+                }
+                if (!portfolioVM.Photo.ValidateSize(2 * 1024))
+                {
+                    ModelState.AddModelError("Photo", "Wrong size");
+                    return View(portfolioVM);
+                }
+                string filename = await portfolioVM.Photo.CreateFileAsync(_env.WebRootPath, "assets", "img", "portfolio");
+                portfolio.Image.DeleteFile(_env.WebRootPath, "assets", "img", "portfolio");
+                portfolio.Image = filename;
+
+            }
+            portfolio.Name = portfolioVM.Name;
+            portfolio.Client = portfolioVM.Client;
+            portfolio.Detail = portfolioVM.Detail;
+            portfolio.ProjectDate = portfolioVM.ProjectDate;
+            portfolio.ProjectUrl = portfolioVM.ProjectUrl;
+            portfolio.CategoryId = portfolioVM.CategoryId;
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+        public async Task<IActionResult> Delete(int id)
+        {
+            if (id <= 0) return BadRequest();
+            Portfolio portfolio = await _context.Portfolios.FirstOrDefaultAsync(p => p.Id == id);
+            if (portfolio is null) return NotFound();
+            portfolio.Image.DeleteFile(_env.WebRootPath, "assets", "img", "portfolio");
+            _context.Portfolios.Remove(portfolio);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
