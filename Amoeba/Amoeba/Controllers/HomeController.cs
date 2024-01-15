@@ -14,11 +14,20 @@ namespace Amoeba.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int key = 1 )
         {
             ICollection<Service> service = await _context.Services.ToListAsync();
-            ICollection<Portfolio> portfolios = await _context.Portfolios.ToListAsync();
-            
+            ICollection<Portfolio> portfolios;
+
+            switch (key)
+            {
+                case 2:
+                    portfolios = await _context.Portfolios.OrderByDescending(p=>p.Id).Take(8).ToListAsync();
+                    break;
+                default:
+                   portfolios = await _context.Portfolios.Take(8).ToListAsync();
+                    break;
+            }
             HomeVM homeVM = new HomeVM
             {
                 Services = service,
@@ -26,5 +35,6 @@ namespace Amoeba.Controllers
             };
             return View(homeVM);
         }
+
     }
 }

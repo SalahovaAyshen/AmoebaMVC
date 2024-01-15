@@ -1,13 +1,17 @@
 ﻿using Amoeba.Areas.Manage.ViewModels;
 using Amoeba.DAL;
 using Amoeba.Models;
+using Amoeba.Utilities.Enums;
 using Amoeba.Utilities.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Amoeba.Areas.Manage.Controllers
 {
     [Area("Manage")]
+    [Authorize(Roles =nameof(UserRole.Admin))]
+
     public class PortfolioController : Controller
     {
         private readonly AppDbContext _context;

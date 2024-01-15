@@ -1,5 +1,6 @@
 ﻿using Amoeba.Areas.Manage.ViewModels;
 using Amoeba.Models;
+using Amoeba.Utilities.Enums;
 using Amoeba.Utilities.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -14,11 +15,13 @@ namespace Amoeba.Areas.Manage.Controllers
     {
         private readonly UserManager<AppUser> _user;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public AccountController(UserManager<AppUser> user, SignInManager<AppUser> signInManager)
+        public AccountController(UserManager<AppUser> user, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _user = user;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
         public IActionResult Register()
         {
@@ -99,6 +102,25 @@ namespace Amoeba.Areas.Manage.Controllers
                 return RedirectToAction("Index", "Dashboard");
             }
             return Redirect(returnurl);
+        }
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Dashboard");
+        }
+        public async Task<IActionResult> CreateRole()
+        {
+            foreach (UserRole item in Enum.GetValues(typeof(UserRole)))
+            {
+                if(!await _roleManager.RoleExistsAsync(item.ToString()))
+                {
+                    await _roleManager.CreateAsync(new IdentityRole
+                    {
+                        Name = item.ToString()
+                    });
+                }
+            }
+            return RedirectToAction("Index", "Dashboard");
         }
     }
 }
